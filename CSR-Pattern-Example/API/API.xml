@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="T:API.Controllers.WeatherForecastController">
+            <summary>
+            Controller for weather forecasts
+            </summary>
+        </member>
+        <member name="M:API.Controllers.WeatherForecastController.GetForecast(API.Requests.WeatherForecast.GetForecastApiRequest)">
+            <summary>
+            Gets the weather forecast for a given date.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.WeatherForecastController.GetForecasts(API.Requests.WeatherForecast.GetForecastsApiRequest)">
+            <summary>
+            Gets weather forecasts for dates between a start date and an end date.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Mapping.WeatherForecast.WeatherForecastMappingExtensions.ToApiModel(Models.WeatherForecast.WeatherForecast)">
+            <summary>
+            Converts WeatherForecast model to WeatherForecastApiResponse model.
+            </summary>
+            <param name="weatherForecast"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Mapping.WeatherForecast.WeatherForecastMappingExtensions.ToApiModels(System.Collections.Generic.IEnumerable{Models.WeatherForecast.WeatherForecast})">
+            <summary>
+            Converts an IEnumerable of WeatherForecast models to an IEnumerable of WeatherForecastApiResponse models.
+            </summary>
+            <param name="weatherForecasts"></param>
+            <returns></returns>
+        </member>
+        <member name="T:API.Requests.WeatherForecast.GetForecastApiRequest">
+            <summary>
+            Request for getting a weather forecast on a given date
+            </summary>
+        </member>
+        <member name="P:API.Requests.WeatherForecast.GetForecastApiRequest.Date">
+            <summary>
+            Date of weather forecast
+            </summary>
+        </member>
+        <member name="T:API.Requests.WeatherForecast.GetForecastsApiRequest">
+            <summary>
+            Request for getting weather forecasts between two given dates
+            </summary>
+        </member>
+        <member name="P:API.Requests.WeatherForecast.GetForecastsApiRequest.StartDate">
+            <summary>
+            Date of first weather forecast
+            </summary>
+        </member>
+        <member name="P:API.Requests.WeatherForecast.GetForecastsApiRequest.EndDate">
+            <summary>
+            Date of last weather forecast
+            </summary>
+        </member>
+        <member name="T:API.Responses.WeatherForecast.WeatherForecastApiResponse">
+            <summary>
+            API response for getting a weather forecast
+            </summary>
+        </member>
+        <member name="P:API.Responses.WeatherForecast.WeatherForecastApiResponse.Date">
+            <summary>
+            Date of weather forecast
+            </summary>
+        </member>
+        <member name="P:API.Responses.WeatherForecast.WeatherForecastApiResponse.TemperatureinCelsius">
+            <summary>
+            Daily average temperature in Celsius.
+            </summary>
+        </member>
+        <member name="P:API.Responses.WeatherForecast.WeatherForecastApiResponse.TemperatureinFahrenheit">
+            <summary>
+            Daily average temperature in Fahrenheit
+            </summary>
+        </member>
+        <member name="P:API.Responses.WeatherForecast.WeatherForecastApiResponse.Summary">
+            <summary>
+            Summary of weather type
+            </summary>
+        </member>
+    </members>
+</doc>
