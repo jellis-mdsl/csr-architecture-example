@@ -9,7 +9,7 @@ namespace Contracts
 {
     public interface IWeatherRepository
     {
-        WeatherForecast GetForecast(DateTime date);
-        IEnumerable<WeatherForecast> GetForecasts(DateTime startDate, DateTime endDate);
+        Forecast GetForecast(DateTime date);
+        IEnumerable<Forecast> GetForecasts(DateTime startDate, DateTime endDate);
     }
 }

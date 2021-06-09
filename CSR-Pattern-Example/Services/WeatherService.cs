@@ -14,12 +14,12 @@ namespace Services
             _weatherRepository = weatherRepository;
         }
 
-        public WeatherForecast GetForecast(DateTime date)
+        public Forecast GetForecast(DateTime date)
         {
             return _weatherRepository.GetForecast(date);
         }
 
-        public IEnumerable<WeatherForecast> GetForecasts(DateTime startDate, DateTime endDate)
+        public IEnumerable<Forecast> GetForecasts(DateTime startDate, DateTime endDate)
         {
             return _weatherRepository.GetForecasts(startDate, endDate);
         }

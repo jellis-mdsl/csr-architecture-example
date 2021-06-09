@@ -14,7 +14,7 @@ namespace API.Mapping.WeatherForecast
         /// </summary>
         /// <param name="weatherForecast"></param>
         /// <returns></returns>
-        internal static WeatherForecastApiResponse ToApiModel(this Models.WeatherForecast.WeatherForecast weatherForecast)
+        internal static WeatherForecastApiResponse ToApiModel(this Forecast weatherForecast)
         {
             return new WeatherForecastApiResponse()
             {
@@ -29,7 +29,7 @@ namespace API.Mapping.WeatherForecast
         /// </summary>
         /// <param name="weatherForecasts"></param>
         /// <returns></returns>
-        internal static IEnumerable<WeatherForecastApiResponse> ToApiModels(this IEnumerable<Models.WeatherForecast.WeatherForecast> weatherForecasts)
+        internal static IEnumerable<WeatherForecastApiResponse> ToApiModels(this IEnumerable<Forecast> weatherForecasts)
         {
             return weatherForecasts.Select(weatherForecast => weatherForecast.ToApiModel());
         }

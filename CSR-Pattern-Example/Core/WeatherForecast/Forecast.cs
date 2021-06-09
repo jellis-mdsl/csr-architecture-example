@@ -2,7 +2,7 @@
 
 namespace Models.WeatherForecast
 {
-    public class WeatherForecast
+    public class Forecast
     {
         public DateTime Date { get; set; }
 

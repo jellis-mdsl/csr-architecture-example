@@ -12,7 +12,7 @@ namespace Repositories
     /// </summary>
     public class WeatherRandomRepository : IWeatherRepository
     {
-        private string[] WeatherTypes = { "Sunny", "Cloudy", "Rainy", "Snowy" };
+        private readonly string[] WeatherTypes = { "Sunny", "Cloudy", "Rainy", "Snowy" };
 
         private Random RandomGenerator { get; }
 
@@ -21,9 +21,9 @@ namespace Repositories
             RandomGenerator = new Random();
         }
 
-        public WeatherForecast GetForecast(DateTime date)
+        public Forecast GetForecast(DateTime date)
         {
-            var forecast = new WeatherForecast()
+            var forecast = new Forecast()
             {
                 Date = date,
                 Summary = WeatherTypes[RandomGenerator.Next(0, WeatherTypes.Length - 1)],
@@ -33,9 +33,9 @@ namespace Repositories
             return forecast;
         }
 
-        public IEnumerable<WeatherForecast> GetForecasts(DateTime startDate, DateTime endDate)
+        public IEnumerable<Forecast> GetForecasts(DateTime startDate, DateTime endDate)
         {
-            var forecasts = new List<WeatherForecast>();
+            var forecasts = new List<Forecast>();
 
             if (!(startDate > endDate))
             {
